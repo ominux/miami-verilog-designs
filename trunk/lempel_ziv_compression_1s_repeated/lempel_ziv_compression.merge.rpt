@@ -1,0 +1,636 @@
+Partition Merge report for lempel_ziv_compression
+Fri Jul 09 17:01:51 2010
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Connections to In-System Debugging Instance "auto_signaltap_0"
+  4. Partition Merge Netlist Types Used
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge RAM Summary
+  8. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Partition Merge Summary                                                      ;
++------------------------------------+-----------------------------------------+
+; Partition Merge Status             ; Successful - Fri Jul 09 17:01:51 2010   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; lempel_ziv_compression                  ;
+; Top-level Entity Name              ; lempel_ziv_compression                  ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 3,800                                   ;
+;     Total combinational functions  ; 1,661                                   ;
+;     Dedicated logic registers      ; 3,010                                   ;
+; Total registers                    ; 3010                                    ;
+; Total pins                         ; 439                                     ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 389,536                                 ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                               ;
++-------------------------+---------------+-----------+----------------+-------------------+-------------------------+---------+
+; Name                    ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection       ; Details ;
++-------------------------+---------------+-----------+----------------+-------------------+-------------------------+---------+
+; CLOCK_50                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CLOCK_50                ; N/A     ;
+; KEY[0]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; KEY[0]                  ; N/A     ;
+; KEY[0]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; KEY[0]                  ; N/A     ;
+; create_counter[0]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[0]       ; N/A     ;
+; create_counter[0]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[0]       ; N/A     ;
+; create_counter[10]      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[10]      ; N/A     ;
+; create_counter[10]      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[10]      ; N/A     ;
+; create_counter[11]      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[11]      ; N/A     ;
+; create_counter[11]      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[11]      ; N/A     ;
+; create_counter[1]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[1]       ; N/A     ;
+; create_counter[1]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[1]       ; N/A     ;
+; create_counter[2]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[2]       ; N/A     ;
+; create_counter[2]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[2]       ; N/A     ;
+; create_counter[3]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[3]       ; N/A     ;
+; create_counter[3]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[3]       ; N/A     ;
+; create_counter[4]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[4]       ; N/A     ;
+; create_counter[4]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[4]       ; N/A     ;
+; create_counter[5]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[5]       ; N/A     ;
+; create_counter[5]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[5]       ; N/A     ;
+; create_counter[6]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[6]       ; N/A     ;
+; create_counter[6]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[6]       ; N/A     ;
+; create_counter[7]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[7]       ; N/A     ;
+; create_counter[7]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[7]       ; N/A     ;
+; create_counter[8]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[8]       ; N/A     ;
+; create_counter[8]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[8]       ; N/A     ;
+; create_counter[9]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[9]       ; N/A     ;
+; create_counter[9]       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; create_counter[9]       ; N/A     ;
+; curr_compression[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[0]     ; N/A     ;
+; curr_compression[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[0]     ; N/A     ;
+; curr_compression[10]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[10]    ; N/A     ;
+; curr_compression[10]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[10]    ; N/A     ;
+; curr_compression[11]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[11]    ; N/A     ;
+; curr_compression[11]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[11]    ; N/A     ;
+; curr_compression[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[1]     ; N/A     ;
+; curr_compression[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[1]     ; N/A     ;
+; curr_compression[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[2]     ; N/A     ;
+; curr_compression[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[2]     ; N/A     ;
+; curr_compression[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[3]     ; N/A     ;
+; curr_compression[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[3]     ; N/A     ;
+; curr_compression[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[4]     ; N/A     ;
+; curr_compression[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[4]     ; N/A     ;
+; curr_compression[5]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[5]     ; N/A     ;
+; curr_compression[5]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[5]     ; N/A     ;
+; curr_compression[6]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[6]     ; N/A     ;
+; curr_compression[6]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[6]     ; N/A     ;
+; curr_compression[7]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[7]     ; N/A     ;
+; curr_compression[7]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[7]     ; N/A     ;
+; curr_compression[8]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[8]     ; N/A     ;
+; curr_compression[8]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[8]     ; N/A     ;
+; curr_compression[9]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[9]     ; N/A     ;
+; curr_compression[9]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_compression[9]     ; N/A     ;
+; curr_string[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[0]          ; N/A     ;
+; curr_string[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[0]          ; N/A     ;
+; curr_string[10]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[10]         ; N/A     ;
+; curr_string[10]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[10]         ; N/A     ;
+; curr_string[11]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[11]         ; N/A     ;
+; curr_string[11]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[11]         ; N/A     ;
+; curr_string[12]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[12]         ; N/A     ;
+; curr_string[12]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[12]         ; N/A     ;
+; curr_string[13]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[13]         ; N/A     ;
+; curr_string[13]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[13]         ; N/A     ;
+; curr_string[14]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[14]         ; N/A     ;
+; curr_string[14]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[14]         ; N/A     ;
+; curr_string[15]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[15]         ; N/A     ;
+; curr_string[15]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[15]         ; N/A     ;
+; curr_string[16]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[16]         ; N/A     ;
+; curr_string[16]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[16]         ; N/A     ;
+; curr_string[17]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[17]         ; N/A     ;
+; curr_string[17]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[17]         ; N/A     ;
+; curr_string[18]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[18]         ; N/A     ;
+; curr_string[18]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[18]         ; N/A     ;
+; curr_string[19]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[19]         ; N/A     ;
+; curr_string[19]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[19]         ; N/A     ;
+; curr_string[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[1]          ; N/A     ;
+; curr_string[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[1]          ; N/A     ;
+; curr_string[20]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[20]         ; N/A     ;
+; curr_string[20]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[20]         ; N/A     ;
+; curr_string[21]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[21]         ; N/A     ;
+; curr_string[21]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[21]         ; N/A     ;
+; curr_string[22]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[22]         ; N/A     ;
+; curr_string[22]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[22]         ; N/A     ;
+; curr_string[23]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[23]         ; N/A     ;
+; curr_string[23]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[23]         ; N/A     ;
+; curr_string[24]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[24]         ; N/A     ;
+; curr_string[24]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[24]         ; N/A     ;
+; curr_string[25]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[25]         ; N/A     ;
+; curr_string[25]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[25]         ; N/A     ;
+; curr_string[26]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[26]         ; N/A     ;
+; curr_string[26]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[26]         ; N/A     ;
+; curr_string[27]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[27]         ; N/A     ;
+; curr_string[27]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[27]         ; N/A     ;
+; curr_string[28]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[28]         ; N/A     ;
+; curr_string[28]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[28]         ; N/A     ;
+; curr_string[29]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[29]         ; N/A     ;
+; curr_string[29]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[29]         ; N/A     ;
+; curr_string[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[2]          ; N/A     ;
+; curr_string[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[2]          ; N/A     ;
+; curr_string[30]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[30]         ; N/A     ;
+; curr_string[30]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[30]         ; N/A     ;
+; curr_string[31]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[31]         ; N/A     ;
+; curr_string[31]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[31]         ; N/A     ;
+; curr_string[32]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[32]         ; N/A     ;
+; curr_string[32]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[32]         ; N/A     ;
+; curr_string[33]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[33]         ; N/A     ;
+; curr_string[33]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[33]         ; N/A     ;
+; curr_string[34]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[34]         ; N/A     ;
+; curr_string[34]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[34]         ; N/A     ;
+; curr_string[35]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[35]         ; N/A     ;
+; curr_string[35]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[35]         ; N/A     ;
+; curr_string[36]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[36]         ; N/A     ;
+; curr_string[36]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[36]         ; N/A     ;
+; curr_string[37]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[37]         ; N/A     ;
+; curr_string[37]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[37]         ; N/A     ;
+; curr_string[38]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[38]         ; N/A     ;
+; curr_string[38]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[38]         ; N/A     ;
+; curr_string[39]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[39]         ; N/A     ;
+; curr_string[39]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[39]         ; N/A     ;
+; curr_string[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[3]          ; N/A     ;
+; curr_string[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[3]          ; N/A     ;
+; curr_string[40]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[40]         ; N/A     ;
+; curr_string[40]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[40]         ; N/A     ;
+; curr_string[41]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[41]         ; N/A     ;
+; curr_string[41]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[41]         ; N/A     ;
+; curr_string[42]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[42]         ; N/A     ;
+; curr_string[42]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[42]         ; N/A     ;
+; curr_string[43]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[43]         ; N/A     ;
+; curr_string[43]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[43]         ; N/A     ;
+; curr_string[44]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[44]         ; N/A     ;
+; curr_string[44]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[44]         ; N/A     ;
+; curr_string[45]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[45]         ; N/A     ;
+; curr_string[45]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[45]         ; N/A     ;
+; curr_string[46]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[46]         ; N/A     ;
+; curr_string[46]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[46]         ; N/A     ;
+; curr_string[47]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[47]         ; N/A     ;
+; curr_string[47]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[47]         ; N/A     ;
+; curr_string[48]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[48]         ; N/A     ;
+; curr_string[48]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[48]         ; N/A     ;
+; curr_string[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[4]          ; N/A     ;
+; curr_string[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[4]          ; N/A     ;
+; curr_string[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[5]          ; N/A     ;
+; curr_string[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[5]          ; N/A     ;
+; curr_string[6]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[6]          ; N/A     ;
+; curr_string[6]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[6]          ; N/A     ;
+; curr_string[7]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[7]          ; N/A     ;
+; curr_string[7]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[7]          ; N/A     ;
+; curr_string[8]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[8]          ; N/A     ;
+; curr_string[8]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[8]          ; N/A     ;
+; curr_string[9]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[9]          ; N/A     ;
+; curr_string[9]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; curr_string[9]          ; N/A     ;
+; data_termination        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; input_data_valid        ; N/A     ;
+; data_termination        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; input_data_valid        ; N/A     ;
+; dictionary.data_a[0]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[0]    ; N/A     ;
+; dictionary.data_a[0]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[0]    ; N/A     ;
+; dictionary.data_a[10]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[10]   ; N/A     ;
+; dictionary.data_a[10]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[10]   ; N/A     ;
+; dictionary.data_a[11]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[11]   ; N/A     ;
+; dictionary.data_a[11]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[11]   ; N/A     ;
+; dictionary.data_a[12]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[12]   ; N/A     ;
+; dictionary.data_a[12]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[12]   ; N/A     ;
+; dictionary.data_a[13]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[13]   ; N/A     ;
+; dictionary.data_a[13]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[13]   ; N/A     ;
+; dictionary.data_a[14]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[14]   ; N/A     ;
+; dictionary.data_a[14]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[14]   ; N/A     ;
+; dictionary.data_a[15]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[15]   ; N/A     ;
+; dictionary.data_a[15]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[15]   ; N/A     ;
+; dictionary.data_a[16]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[16]   ; N/A     ;
+; dictionary.data_a[16]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[16]   ; N/A     ;
+; dictionary.data_a[17]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[17]   ; N/A     ;
+; dictionary.data_a[17]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[17]   ; N/A     ;
+; dictionary.data_a[18]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[18]   ; N/A     ;
+; dictionary.data_a[18]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[18]   ; N/A     ;
+; dictionary.data_a[19]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[19]   ; N/A     ;
+; dictionary.data_a[19]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[19]   ; N/A     ;
+; dictionary.data_a[1]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[1]    ; N/A     ;
+; dictionary.data_a[1]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[1]    ; N/A     ;
+; dictionary.data_a[20]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[20]   ; N/A     ;
+; dictionary.data_a[20]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[20]   ; N/A     ;
+; dictionary.data_a[21]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[21]   ; N/A     ;
+; dictionary.data_a[21]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[21]   ; N/A     ;
+; dictionary.data_a[22]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[22]   ; N/A     ;
+; dictionary.data_a[22]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[22]   ; N/A     ;
+; dictionary.data_a[23]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[23]   ; N/A     ;
+; dictionary.data_a[23]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[23]   ; N/A     ;
+; dictionary.data_a[24]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[24]   ; N/A     ;
+; dictionary.data_a[24]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[24]   ; N/A     ;
+; dictionary.data_a[25]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[25]   ; N/A     ;
+; dictionary.data_a[25]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[25]   ; N/A     ;
+; dictionary.data_a[26]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[26]   ; N/A     ;
+; dictionary.data_a[26]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[26]   ; N/A     ;
+; dictionary.data_a[27]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[27]   ; N/A     ;
+; dictionary.data_a[27]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[27]   ; N/A     ;
+; dictionary.data_a[28]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[28]   ; N/A     ;
+; dictionary.data_a[28]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[28]   ; N/A     ;
+; dictionary.data_a[29]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[29]   ; N/A     ;
+; dictionary.data_a[29]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[29]   ; N/A     ;
+; dictionary.data_a[2]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[2]    ; N/A     ;
+; dictionary.data_a[2]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[2]    ; N/A     ;
+; dictionary.data_a[30]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[30]   ; N/A     ;
+; dictionary.data_a[30]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[30]   ; N/A     ;
+; dictionary.data_a[31]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[31]   ; N/A     ;
+; dictionary.data_a[31]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[31]   ; N/A     ;
+; dictionary.data_a[32]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[32]   ; N/A     ;
+; dictionary.data_a[32]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[32]   ; N/A     ;
+; dictionary.data_a[33]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[33]   ; N/A     ;
+; dictionary.data_a[33]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[33]   ; N/A     ;
+; dictionary.data_a[34]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[34]   ; N/A     ;
+; dictionary.data_a[34]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[34]   ; N/A     ;
+; dictionary.data_a[35]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[35]   ; N/A     ;
+; dictionary.data_a[35]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[35]   ; N/A     ;
+; dictionary.data_a[36]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[36]   ; N/A     ;
+; dictionary.data_a[36]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[36]   ; N/A     ;
+; dictionary.data_a[37]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[37]   ; N/A     ;
+; dictionary.data_a[37]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[37]   ; N/A     ;
+; dictionary.data_a[38]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[38]   ; N/A     ;
+; dictionary.data_a[38]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[38]   ; N/A     ;
+; dictionary.data_a[39]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[39]   ; N/A     ;
+; dictionary.data_a[39]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[39]   ; N/A     ;
+; dictionary.data_a[3]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[3]    ; N/A     ;
+; dictionary.data_a[3]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[3]    ; N/A     ;
+; dictionary.data_a[40]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[40]   ; N/A     ;
+; dictionary.data_a[40]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[40]   ; N/A     ;
+; dictionary.data_a[41]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[41]   ; N/A     ;
+; dictionary.data_a[41]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[41]   ; N/A     ;
+; dictionary.data_a[42]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[42]   ; N/A     ;
+; dictionary.data_a[42]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[42]   ; N/A     ;
+; dictionary.data_a[43]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[43]   ; N/A     ;
+; dictionary.data_a[43]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[43]   ; N/A     ;
+; dictionary.data_a[44]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[44]   ; N/A     ;
+; dictionary.data_a[44]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[44]   ; N/A     ;
+; dictionary.data_a[45]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[45]   ; N/A     ;
+; dictionary.data_a[45]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[45]   ; N/A     ;
+; dictionary.data_a[46]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[46]   ; N/A     ;
+; dictionary.data_a[46]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[46]   ; N/A     ;
+; dictionary.data_a[47]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[47]   ; N/A     ;
+; dictionary.data_a[47]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[47]   ; N/A     ;
+; dictionary.data_a[48]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[48]   ; N/A     ;
+; dictionary.data_a[48]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[48]   ; N/A     ;
+; dictionary.data_a[4]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[4]    ; N/A     ;
+; dictionary.data_a[4]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[4]    ; N/A     ;
+; dictionary.data_a[5]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[5]    ; N/A     ;
+; dictionary.data_a[5]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[5]    ; N/A     ;
+; dictionary.data_a[6]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[6]    ; N/A     ;
+; dictionary.data_a[6]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[6]    ; N/A     ;
+; dictionary.data_a[7]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[7]    ; N/A     ;
+; dictionary.data_a[7]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[7]    ; N/A     ;
+; dictionary.data_a[8]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[8]    ; N/A     ;
+; dictionary.data_a[8]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[8]    ; N/A     ;
+; dictionary.data_a[9]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[9]    ; N/A     ;
+; dictionary.data_a[9]    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.data_a[9]    ; N/A     ;
+; dictionary.waddr_a[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[0]   ; N/A     ;
+; dictionary.waddr_a[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[0]   ; N/A     ;
+; dictionary.waddr_a[10]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[10]  ; N/A     ;
+; dictionary.waddr_a[10]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[10]  ; N/A     ;
+; dictionary.waddr_a[11]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[11]  ; N/A     ;
+; dictionary.waddr_a[11]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[11]  ; N/A     ;
+; dictionary.waddr_a[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[1]   ; N/A     ;
+; dictionary.waddr_a[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[1]   ; N/A     ;
+; dictionary.waddr_a[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[2]   ; N/A     ;
+; dictionary.waddr_a[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[2]   ; N/A     ;
+; dictionary.waddr_a[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[3]   ; N/A     ;
+; dictionary.waddr_a[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[3]   ; N/A     ;
+; dictionary.waddr_a[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[4]   ; N/A     ;
+; dictionary.waddr_a[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[4]   ; N/A     ;
+; dictionary.waddr_a[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[5]   ; N/A     ;
+; dictionary.waddr_a[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[5]   ; N/A     ;
+; dictionary.waddr_a[6]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[6]   ; N/A     ;
+; dictionary.waddr_a[6]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[6]   ; N/A     ;
+; dictionary.waddr_a[7]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[7]   ; N/A     ;
+; dictionary.waddr_a[7]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[7]   ; N/A     ;
+; dictionary.waddr_a[8]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[8]   ; N/A     ;
+; dictionary.waddr_a[8]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[8]   ; N/A     ;
+; dictionary.waddr_a[9]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[9]   ; N/A     ;
+; dictionary.waddr_a[9]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.waddr_a[9]   ; N/A     ;
+; dictionary.we_a         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.we_a         ; N/A     ;
+; dictionary.we_a         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; dictionary.we_a         ; N/A     ;
+; in[0]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[0]                   ; N/A     ;
+; in[0]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[0]                   ; N/A     ;
+; in[1]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[1]                   ; N/A     ;
+; in[1]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[1]                   ; N/A     ;
+; in[2]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[2]                   ; N/A     ;
+; in[2]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[2]                   ; N/A     ;
+; in[3]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[3]                   ; N/A     ;
+; in[3]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[3]                   ; N/A     ;
+; in[4]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[4]                   ; N/A     ;
+; in[4]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[4]                   ; N/A     ;
+; in[5]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[5]                   ; N/A     ;
+; in[5]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[5]                   ; N/A     ;
+; in[6]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[6]                   ; N/A     ;
+; in[6]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[6]                   ; N/A     ;
+; in[7]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[7]                   ; N/A     ;
+; in[7]                   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; in[7]                   ; N/A     ;
+; out[0]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[0]~reg0             ; N/A     ;
+; out[0]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[0]~reg0             ; N/A     ;
+; out[10]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[10]~reg0            ; N/A     ;
+; out[10]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[10]~reg0            ; N/A     ;
+; out[11]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[11]~reg0            ; N/A     ;
+; out[11]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[11]~reg0            ; N/A     ;
+; out[1]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[1]~reg0             ; N/A     ;
+; out[1]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[1]~reg0             ; N/A     ;
+; out[2]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[2]~reg0             ; N/A     ;
+; out[2]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[2]~reg0             ; N/A     ;
+; out[3]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[3]~reg0             ; N/A     ;
+; out[3]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[3]~reg0             ; N/A     ;
+; out[4]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[4]~reg0             ; N/A     ;
+; out[4]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[4]~reg0             ; N/A     ;
+; out[5]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[5]~reg0             ; N/A     ;
+; out[5]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[5]~reg0             ; N/A     ;
+; out[6]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[6]~reg0             ; N/A     ;
+; out[6]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[6]~reg0             ; N/A     ;
+; out[7]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[7]~reg0             ; N/A     ;
+; out[7]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[7]~reg0             ; N/A     ;
+; out[8]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[8]~reg0             ; N/A     ;
+; out[8]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[8]~reg0             ; N/A     ;
+; out[9]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[9]~reg0             ; N/A     ;
+; out[9]                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; out[9]~reg0             ; N/A     ;
+; s.create_item           ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.create_item           ; N/A     ;
+; s.create_item           ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.create_item           ; N/A     ;
+; s.create_loop           ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.create_loop           ; N/A     ;
+; s.create_loop           ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.create_loop           ; N/A     ;
+; s.done                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.done                  ; N/A     ;
+; s.done                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.done                  ; N/A     ;
+; s.encode                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.encode                ; N/A     ;
+; s.encode                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.encode                ; N/A     ;
+; s.get_next_bit          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.get_next_bit          ; N/A     ;
+; s.get_next_bit          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.get_next_bit          ; N/A     ;
+; s.initialize_dictionary ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.initialize_dictionary ; N/A     ;
+; s.initialize_dictionary ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.initialize_dictionary ; N/A     ;
+; s.make_zeros            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.make_zeros~_wirecell  ; N/A     ;
+; s.make_zeros            ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.make_zeros~_wirecell  ; N/A     ;
+; s.search                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.search                ; N/A     ;
+; s.search                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; s.search                ; N/A     ;
+; spot[0]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[0]                 ; N/A     ;
+; spot[0]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[0]                 ; N/A     ;
+; spot[10]                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[10]                ; N/A     ;
+; spot[10]                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[10]                ; N/A     ;
+; spot[11]                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[11]                ; N/A     ;
+; spot[11]                ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[11]                ; N/A     ;
+; spot[1]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[1]                 ; N/A     ;
+; spot[1]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[1]                 ; N/A     ;
+; spot[2]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[2]                 ; N/A     ;
+; spot[2]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[2]                 ; N/A     ;
+; spot[3]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[3]                 ; N/A     ;
+; spot[3]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[3]                 ; N/A     ;
+; spot[4]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[4]                 ; N/A     ;
+; spot[4]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[4]                 ; N/A     ;
+; spot[5]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[5]                 ; N/A     ;
+; spot[5]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[5]                 ; N/A     ;
+; spot[6]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[6]                 ; N/A     ;
+; spot[6]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[6]                 ; N/A     ;
+; spot[7]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[7]                 ; N/A     ;
+; spot[7]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[7]                 ; N/A     ;
+; spot[8]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[8]                 ; N/A     ;
+; spot[8]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[8]                 ; N/A     ;
+; spot[9]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[9]                 ; N/A     ;
+; spot[9]                 ; pre-synthesis ; connected ; Top            ; post-synthesis    ; spot[9]                 ; N/A     ;
+; test_count2[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[0]          ; N/A     ;
+; test_count2[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[0]          ; N/A     ;
+; test_count2[10]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[10]         ; N/A     ;
+; test_count2[10]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[10]         ; N/A     ;
+; test_count2[11]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[11]         ; N/A     ;
+; test_count2[11]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[11]         ; N/A     ;
+; test_count2[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[1]          ; N/A     ;
+; test_count2[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[1]          ; N/A     ;
+; test_count2[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[2]          ; N/A     ;
+; test_count2[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[2]          ; N/A     ;
+; test_count2[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[3]          ; N/A     ;
+; test_count2[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[3]          ; N/A     ;
+; test_count2[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[4]          ; N/A     ;
+; test_count2[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[4]          ; N/A     ;
+; test_count2[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[5]          ; N/A     ;
+; test_count2[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[5]          ; N/A     ;
+; test_count2[6]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[6]          ; N/A     ;
+; test_count2[6]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[6]          ; N/A     ;
+; test_count2[7]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[7]          ; N/A     ;
+; test_count2[7]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[7]          ; N/A     ;
+; test_count2[8]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[8]          ; N/A     ;
+; test_count2[8]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[8]          ; N/A     ;
+; test_count2[9]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[9]          ; N/A     ;
+; test_count2[9]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; test_count2[9]          ; N/A     ;
++-------------------------+---------------+-----------+----------------+-------------------+-------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Post-Fit               ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                     ;
++---------------------------------------------+--------+------------------+--------------------------------+
+; Statistic                                   ; Top    ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ;
++---------------------------------------------+--------+------------------+--------------------------------+
+; Estimated Total logic elements              ; 804    ; 113              ; 2884                           ;
+;                                             ;        ;                  ;                                ;
+; Total combinational functions               ; 680    ; 103              ; 878                            ;
+; Logic element usage by number of LUT inputs ;        ;                  ;                                ;
+;     -- 4 input functions                    ; 364    ; 40               ; 535                            ;
+;     -- 3 input functions                    ; 131    ; 42               ; 261                            ;
+;     -- <=2 input functions                  ; 185    ; 21               ; 82                             ;
+;                                             ;        ;                  ;                                ;
+; Logic elements by mode                      ;        ;                  ;                                ;
+;     -- normal mode                          ; 580    ; 99               ; 827                            ;
+;     -- arithmetic mode                      ; 100    ; 4                ; 51                             ;
+;                                             ;        ;                  ;                                ;
+; Total registers                             ; 397    ; 73               ; 2540                           ;
+;     -- Dedicated logic registers            ; 397    ; 73               ; 2540                           ;
+;     -- I/O registers                        ; 0      ; 0                ; 0                              ;
+;                                             ;        ;                  ;                                ;
+; Virtual pins                                ; 0      ; 0                ; 0                              ;
+; I/O pins                                    ; 439    ; 0                ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0      ; 0                ; 0                              ;
+; Total memory bits                           ; 196000 ; 0                ; 193536                         ;
+; Total RAM block bits                        ; 0      ; 0                ; 0                              ;
+; JTAG                                        ; 1      ; 0                ; 0                              ;
+;                                             ;        ;                  ;                                ;
+; Connections                                 ;        ;                  ;                                ;
+;     -- Input Connections                    ; 1      ; 111              ; 3611                           ;
+;     -- Registered Input Connections         ; 0      ; 82               ; 2941                           ;
+;     -- Output Connections                   ; 3402   ; 320              ; 1                              ;
+;     -- Registered Output Connections        ; 374    ; 319              ; 0                              ;
+;                                             ;        ;                  ;                                ;
+; Internal Connections                        ;        ;                  ;                                ;
+;     -- Total Connections                    ; 8329   ; 885              ; 14747                          ;
+;     -- Registered Connections               ; 1829   ; 712              ; 11842                          ;
+;                                             ;        ;                  ;                                ;
+; External Connections                        ;        ;                  ;                                ;
+;     -- Top                                  ; 0      ; 103              ; 3300                           ;
+;     -- sld_hub:auto_hub                     ; 103    ; 16               ; 312                            ;
+;     -- sld_signaltap:auto_signaltap_0       ; 3300   ; 312              ; 0                              ;
+;                                             ;        ;                  ;                                ;
+; Partition Interface                         ;        ;                  ;                                ;
+;     -- Input Ports                          ; 51     ; 18               ; 435                            ;
+;     -- Output Ports                         ; 409    ; 36               ; 388                            ;
+;     -- Bidir Ports                          ; 159    ; 0                ; 0                              ;
+;                                             ;        ;                  ;                                ;
+; Registered Ports                            ;        ;                  ;                                ;
+;     -- Registered Input Ports               ; 0      ; 4                ; 383                            ;
+;     -- Registered Output Ports              ; 0      ; 26               ; 1                              ;
+;                                             ;        ;                  ;                                ;
+; Port Connectivity                           ;        ;                  ;                                ;
+;     -- Input Ports driven by GND            ; 0      ; 1                ; 0                              ;
+;     -- Output Ports driven by GND           ; 0      ; 0                ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0      ; 0                ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0      ; 0                ; 0                              ;
+;     -- Input Ports with no Source           ; 0      ; 0                ; 35                             ;
+;     -- Output Ports with no Source          ; 0      ; 0                ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0      ; 1                ; 40                             ;
+;     -- Output Ports with no Fanout          ; 0      ; 14               ; 379                            ;
++---------------------------------------------+--------+------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++--------------------------------------------------------+
+; Partition Merge Resource Usage Summary                 ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 3,800    ;
+;                                             ;          ;
+; Total combinational functions               ; 1661     ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 939      ;
+;     -- 3 input functions                    ; 434      ;
+;     -- <=2 input functions                  ; 288      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 1506     ;
+;     -- arithmetic mode                      ; 155      ;
+;                                             ;          ;
+; Total registers                             ; 3010     ;
+;     -- Dedicated logic registers            ; 3010     ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 439      ;
+; Total memory bits                           ; 389536   ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 2280     ;
+; Total fan-out                               ; 20047    ;
+; Average fan-out                             ; 3.75     ;
++---------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; altsyncram:dictionary_rtl_0|altsyncram_dgi1:auto_generated|ALTSYNCRAM                                                                                                                      ; AUTO ; Simple Dual Port ; 4000         ; 49           ; 4000         ; 49           ; 196000 ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_vvs3:auto_generated|altsyncram_ekq1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port   ; 1024         ; 189          ; 1024         ; 189          ; 193536 ; None ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Partition Merge
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Fri Jul 09 17:01:48 2010
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off lempel_ziv_compression -c lempel_ziv_compression --merge=on
+Warning: Previously generated Fitter netlist for partition "Top" is older than current Synthesis netlist -- using the current Synthesis netlist instead to ensure that the latest source changes are included
+    Info: Forcing the Quartus II software to use the previously generated Fitter netlist is allowed by setting the Netlist Type to Post-Fit (Strict)
+Info: Using synthesis netlist for partition "Top"
+Info: Using synthesis netlist for partition "sld_hub:auto_hub"
+Info: Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Info: Succesfully connected in-system debug instance "auto_signaltap_0" to all 379 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info: Resolved and merged 3 partition(s)
+Warning: Design contains 46 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_27"
+    Warning (15610): No output dependent on input pin "EXT_CLOCK"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "UART_RXD"
+    Warning (15610): No output dependent on input pin "IRDA_RXD"
+    Warning (15610): No output dependent on input pin "OTG_INT0"
+    Warning (15610): No output dependent on input pin "OTG_INT1"
+    Warning (15610): No output dependent on input pin "OTG_DREQ0"
+    Warning (15610): No output dependent on input pin "OTG_DREQ1"
+    Warning (15610): No output dependent on input pin "TDI"
+    Warning (15610): No output dependent on input pin "TCK"
+    Warning (15610): No output dependent on input pin "TCS"
+    Warning (15610): No output dependent on input pin "PS2_DAT"
+    Warning (15610): No output dependent on input pin "PS2_CLK"
+    Warning (15610): No output dependent on input pin "ENET_INT"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "TD_DATA[0]"
+    Warning (15610): No output dependent on input pin "TD_DATA[1]"
+    Warning (15610): No output dependent on input pin "TD_DATA[2]"
+    Warning (15610): No output dependent on input pin "TD_DATA[3]"
+    Warning (15610): No output dependent on input pin "TD_DATA[4]"
+    Warning (15610): No output dependent on input pin "TD_DATA[5]"
+    Warning (15610): No output dependent on input pin "TD_DATA[6]"
+    Warning (15610): No output dependent on input pin "TD_DATA[7]"
+    Warning (15610): No output dependent on input pin "TD_HS"
+    Warning (15610): No output dependent on input pin "TD_VS"
+Info: Implemented 4573 device resources after synthesis - the final resource count might be different
+    Info: Implemented 51 input pins
+    Info: Implemented 233 output pins
+    Info: Implemented 159 bidirectional pins
+    Info: Implemented 3891 logic cells
+    Info: Implemented 238 RAM segments
+Info: Quartus II Partition Merge was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 183 megabytes
+    Info: Processing ended: Fri Jul 09 17:01:52 2010
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

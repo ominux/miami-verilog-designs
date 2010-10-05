@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lempel_ziv_compression">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|lpm_mux:Mux3" CBX_FILE_NAME="mux_aqc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_vvs3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|lpm_mux:Mux0" CBX_FILE_NAME="mux_aqc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_7oc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_7ei.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|lpm_mux:Mux1" CBX_FILE_NAME="mux_ooc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|altsyncram:dictionary_rtl_0" CBX_FILE_NAME="altsyncram_dgi1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|lpm_mux:Mux0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|lpm_mux:Mux1" CBX_FILE_NAME="mux_aqc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|lpm_mux:Mux2" CBX_FILE_NAME="mux_ooc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|lpm_mux:Mux1" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|lpm_mux:Mux2" CBX_FILE_NAME="mux_aqc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_m4j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|lpm_mux:Mux3" CBX_FILE_NAME="mux_ooc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_qbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lempel_ziv_compression|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|lpm_mux:Mux0" CBX_FILE_NAME="mux_ooc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

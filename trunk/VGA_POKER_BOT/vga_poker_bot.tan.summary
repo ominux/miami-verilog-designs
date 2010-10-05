@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.957 ns
+From           : start_game
+To             : debouncer:d2|count[11]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.651 ns
+From           : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_s9d1:auto_generated|altsyncram_s3o1:altsyncram1|ram_block2a0
+To             : vga_b[0]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.672 ns
+From           : rst
+To             : poker_bot:poker_game|dealer:the_dealer|valid_move:betting|receive_player_input:player1|accepted_players_input[1]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'poker_clk:tenMhzvlovk|altpll:altpll_component|_clk0'
+Slack          : 13.893 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : debouncer:d1|clean
+To             : poker_bot:poker_game|S[2]
+From Clock     : clk
+To Clock       : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : 15.000 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 200.00 MHz ( period = 5.000 ns )
+From           : debouncer:d1|count[4]
+To             : debouncer:d1|count[19]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1'
+Slack          : 34.379 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 177.90 MHz ( period = 5.621 ns )
+From           : VgaAdapter:inst|yCounter[6]
+To             : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_s9d1:auto_generated|altsyncram_s3o1:altsyncram1|ram_block2a4~porta_address_reg11
+From Clock     : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+To Clock       : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'poker_clk:tenMhzvlovk|altpll:altpll_component|_clk0'
+Slack          : 0.391 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : poker_bot:poker_game|cur
+To             : poker_bot:poker_game|cur
+From Clock     : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+To Clock       : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : debouncer:d2|clean
+To             : debouncer:d2|clean
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1'
+Slack          : 0.521 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : VgaAdapter:inst|VGA_HS1
+To             : VgaAdapter:inst|VGA_HS
+From Clock     : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+To Clock       : poker_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

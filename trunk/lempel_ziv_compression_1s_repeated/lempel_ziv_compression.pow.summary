@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Mon Jul 26 15:30:51 2010
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : lempel_ziv_compression
+Top-level Entity Name : lempel_ziv_compression
+Family : Cyclone II
+Device : EP2C35F672C6
+Power Models : Final
+Total Thermal Power Dissipation : 182.02 mW
+Core Dynamic Thermal Power Dissipation : 19.05 mW
+Core Static Thermal Power Dissipation : 80.16 mW
+I/O Thermal Power Dissipation : 82.81 mW
+Power Estimation Confidence : Medium: user provided moderately complete toggle rate data
