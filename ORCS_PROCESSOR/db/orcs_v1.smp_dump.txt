@@ -1,0 +1,20 @@
+
+State Machine - |orcs_v1|control:the_control|instruction_fetch_sequence
+Name instruction_fetch_sequence.01 
+instruction_fetch_sequence.00 0 
+instruction_fetch_sequence.01 1 
+
+State Machine - |orcs_v1|control:the_control|S
+Name S.WAIT S.INCREMENT S.EXECUTE4 S.EXECUTE3 S.EXECUTE2 S.EXECUTE S.DECODE S.FETCH5 S.FETCH4 S.FETCH3 S.FETCH2 S.FETCH 
+S.FETCH 0 0 0 0 0 0 0 0 0 0 0 0 
+S.FETCH2 0 0 0 0 0 0 0 0 0 0 1 1 
+S.FETCH3 0 0 0 0 0 0 0 0 0 1 0 1 
+S.FETCH4 0 0 0 0 0 0 0 0 1 0 0 1 
+S.FETCH5 0 0 0 0 0 0 0 1 0 0 0 1 
+S.DECODE 0 0 0 0 0 0 1 0 0 0 0 1 
+S.EXECUTE 0 0 0 0 0 1 0 0 0 0 0 1 
+S.EXECUTE2 0 0 0 0 1 0 0 0 0 0 0 1 
+S.EXECUTE3 0 0 0 1 0 0 0 0 0 0 0 1 
+S.EXECUTE4 0 0 1 0 0 0 0 0 0 0 0 1 
+S.INCREMENT 0 1 0 0 0 0 0 0 0 0 0 1 
+S.WAIT 1 0 0 0 0 0 0 0 0 0 0 1 

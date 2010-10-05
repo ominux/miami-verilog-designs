@@ -1,0 +1,61 @@
+MED
+H:\TEACHING\ECE278\SPRING_2010\HARDWARE_VERSION\orcs_v1.mif
+
+	Undo Commands
+	     1.	Cells
+	     2.	Cells
+	     3.	Cells
+	     4.	Cells
+	     5.	Cells
+	     6.	Cells
+	     7.	Cells
+	     8.	Cells
+	     9.	Cells
+	    10.	Cells
+	    11.	Cells
+	    12.	Cells
+	    13.	Cells
+	    14.	Cells
+	    15.	Cells
+	    16.	Cells
+	    17.	Cells
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+	     2.	||Compilation Report||Analysis & Synthesis||Connectivity Checks||Port Connectivity Checks: "alu:the_alu"
+	     3.	||Compilation Report||Analysis & Synthesis||Connectivity Checks||Port Connectivity Checks: "memory:main_memory"
+	     4.	||Compilation Report||Analysis & Synthesis||Connectivity Checks||Port Connectivity Checks: "alu:the_alu"
+	     5.	||Compilation Report||Flow Summary
+
+
+WED
+
+	Undo Commands
+	     1.	Insert Node or Bus
+	     2.	Delete Node, Bus or Waveform Divider
+	     3.	Insert Node or Bus
+	     4.	Delete Node, Bus or Waveform Divider
+	     5.	Insert Node or Bus
+	     6.	Delete Node, Bus or Waveform Divider
+	     7.	Insert Node or Bus
+	     8.	Delete Node, Bus or Waveform Divider
+	     9.	Delete Node, Bus or Waveform Divider
+	    10.	Edit Waveform
+	    11.	Edit Waveform
+	    12.	Clock
+	    13.	Insert Node or Bus
+
+
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Simulation Waveforms
+	     2.	||Simulation Report||Simulator||Logical Memories|||orcs_v1|memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated|ALTSYNCRAM
+	     3.	||Simulation Report||Simulator||Simulation Waveforms
+	     4.	||Simulation Report||Simulator||Logical Memories|||orcs_v1|memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated|ALTSYNCRAM
+	     5.	||Simulation Report||Simulator||Simulation Waveforms
+
+
