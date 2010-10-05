@@ -1,0 +1,520 @@
+Analysis & Synthesis report for orcs_v1
+Fri Mar 19 09:59:42 2010
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |orcs_v1|control:the_control|instruction_fetch_sequence
+ 10. State Machine - |orcs_v1|control:the_control|S
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated
+ 15. Parameter Settings for User Entity Instance: memory:main_memory|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: control:the_control
+ 17. Parameter Settings for User Entity Instance: alu:the_alu
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "memory:main_memory"
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Mar 19 09:59:42 2010   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; orcs_v1                                 ;
+; Top-level Entity Name              ; orcs_v1                                 ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 863                                     ;
+;     Total combinational functions  ; 589                                     ;
+;     Dedicated logic registers      ; 351                                     ;
+; Total registers                    ; 351                                     ;
+; Total pins                         ; 120                                     ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 16,384                                  ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; orcs_v1            ; orcs_v1            ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                           ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------+
+; control.v                        ; yes             ; User Verilog HDL File            ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/control.v              ;
+; alu.v                            ; yes             ; User Verilog HDL File            ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/alu.v                  ;
+; orcs_v1.v                        ; yes             ; User Verilog HDL File            ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/orcs_v1.v              ;
+; register_file.v                  ; yes             ; User Verilog HDL File            ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/register_file.v        ;
+; orcs_v1.mif                      ; yes             ; User Memory Initialization File  ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/orcs_v1.mif            ;
+; memory.v                         ; yes             ; User Wizard-Generated File       ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/memory.v               ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/91/quartus/libraries/megafunctions/altsyncram.tdf            ;
+; db/altsyncram_17f1.tdf           ; yes             ; Auto-Generated Megafunction      ; H:/TEACHING/ECE278/SPRING_2010/HARDWARE_VERSION/db/altsyncram_17f1.tdf ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 863   ;
+;                                             ;       ;
+; Total combinational functions               ; 589   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 463   ;
+;     -- 3 input functions                    ; 81    ;
+;     -- <=2 input functions                  ; 45    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 558   ;
+;     -- arithmetic mode                      ; 31    ;
+;                                             ;       ;
+; Total registers                             ; 351   ;
+;     -- Dedicated logic registers            ; 351   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 120   ;
+; Total memory bits                           ; 16384 ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 367   ;
+; Total fan-out                               ; 3903  ;
+; Average fan-out                             ; 3.63  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
+; |orcs_v1                                  ; 589 (32)          ; 351 (0)      ; 16384       ; 0            ; 0       ; 0         ; 120  ; 0            ; |orcs_v1                                                                                   ; work         ;
+;    |alu:the_alu|                          ; 54 (54)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|alu:the_alu                                                                       ;              ;
+;    |control:the_control|                  ; 151 (151)         ; 93 (93)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|control:the_control                                                               ; work         ;
+;    |memory:main_memory|                   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|memory:main_memory                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|memory:main_memory|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_17f1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated ; work         ;
+;    |register_file:the_reg_file|           ; 352 (352)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |orcs_v1|register_file:the_reg_file                                                        ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                    ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+; Name                                                                                         ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+; memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 1024         ; 16           ; --           ; --           ; 16384 ; orcs_v1.mif ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------+
+; State Machine - |orcs_v1|control:the_control|instruction_fetch_sequence ;
++-------------------------------+-----------------------------------------+
+; Name                          ; instruction_fetch_sequence.01           ;
++-------------------------------+-----------------------------------------+
+; instruction_fetch_sequence.00 ; 0                                       ;
+; instruction_fetch_sequence.01 ; 1                                       ;
++-------------------------------+-----------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |orcs_v1|control:the_control|S                                                                                                         ;
++-------------+--------+-------------+------------+------------+------------+-----------+----------+----------+----------+----------+----------+---------+
+; Name        ; S.WAIT ; S.INCREMENT ; S.EXECUTE4 ; S.EXECUTE3 ; S.EXECUTE2 ; S.EXECUTE ; S.DECODE ; S.FETCH5 ; S.FETCH4 ; S.FETCH3 ; S.FETCH2 ; S.FETCH ;
++-------------+--------+-------------+------------+------------+------------+-----------+----------+----------+----------+----------+----------+---------+
+; S.FETCH     ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0       ;
+; S.FETCH2    ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 1       ;
+; S.FETCH3    ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 1       ;
+; S.FETCH4    ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 1       ;
+; S.FETCH5    ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 1       ;
+; S.DECODE    ; 0      ; 0           ; 0          ; 0          ; 0          ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.EXECUTE   ; 0      ; 0           ; 0          ; 0          ; 0          ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.EXECUTE2  ; 0      ; 0           ; 0          ; 0          ; 1          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.EXECUTE3  ; 0      ; 0           ; 0          ; 1          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.EXECUTE4  ; 0      ; 0           ; 1          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.INCREMENT ; 0      ; 1           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
+; S.WAIT      ; 1      ; 0           ; 0          ; 0          ; 0          ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1       ;
++-------------+--------+-------------+------------+------------+------------+-----------+----------+----------+----------+----------+----------+---------+
+
+
++-----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                    ;
++--------------------------------------------------+--------------------+
+; Register name                                    ; Reason for Removal ;
++--------------------------------------------------+--------------------+
+; control:the_control|instruction_fetch_sequence~6 ; Lost fanout        ;
+; control:the_control|S~4                          ; Lost fanout        ;
+; control:the_control|S~5                          ; Lost fanout        ;
+; control:the_control|S~6                          ; Lost fanout        ;
+; control:the_control|S~7                          ; Lost fanout        ;
+; control:the_control|S~8                          ; Lost fanout        ;
+; control:the_control|S~9                          ; Lost fanout        ;
+; Total Number of Removed Registers = 7            ;                    ;
++--------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 351   ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 323   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 332   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |orcs_v1|control:the_control|immediate_line[8]   ;
+; 22:1               ; 16 bits   ; 224 LEs       ; 0 LEs                ; 224 LEs                ; Yes        ; |orcs_v1|control:the_control|pc[6]               ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |orcs_v1|control:the_control|alu_c[1]            ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |orcs_v1|control:the_control|register_file_c[2]  ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 24 LEs               ; 28 LEs                 ; Yes        ; |orcs_v1|control:the_control|register_file_c[11] ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 24 LEs               ; 40 LEs                 ; Yes        ; |orcs_v1|control:the_control|register_file_c[8]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |orcs_v1|alu:the_alu|Mux4                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |orcs_v1|Mux15                                   ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |orcs_v1|register_file:the_reg_file|Mux0         ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |orcs_v1|register_file:the_reg_file|Mux31        ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |orcs_v1|control:the_control|Add0                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:main_memory|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------+
+; Parameter Name                     ; Value                ; Type                                ;
++------------------------------------+----------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                             ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                             ;
+; WIDTH_A                            ; 16                   ; Signed Integer                      ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                      ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WIDTH_B                            ; 1                    ; Untyped                             ;
+; WIDTHAD_B                          ; 1                    ; Untyped                             ;
+; NUMWORDS_B                         ; 1                    ; Untyped                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 2                    ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                             ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; INIT_FILE                          ; orcs_v1.mif          ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_17f1      ; Untyped                             ;
++------------------------------------+----------------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: control:the_control ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; FETCH          ; 00000 ; Unsigned Binary                         ;
+; FETCH2         ; 00001 ; Unsigned Binary                         ;
+; FETCH3         ; 00010 ; Unsigned Binary                         ;
+; FETCH4         ; 00011 ; Unsigned Binary                         ;
+; FETCH5         ; 00100 ; Unsigned Binary                         ;
+; DECODE         ; 01000 ; Unsigned Binary                         ;
+; EXECUTE        ; 10000 ; Unsigned Binary                         ;
+; EXECUTE2       ; 10001 ; Unsigned Binary                         ;
+; EXECUTE3       ; 10010 ; Unsigned Binary                         ;
+; EXECUTE4       ; 10011 ; Unsigned Binary                         ;
+; INCREMENT      ; 11000 ; Unsigned Binary                         ;
+; WAIT           ; 11111 ; Unsigned Binary                         ;
+; MOVE           ; 0000  ; Unsigned Binary                         ;
+; MOVEI          ; 0001  ; Unsigned Binary                         ;
+; LOAD           ; 0100  ; Unsigned Binary                         ;
+; STORE          ; 0101  ; Unsigned Binary                         ;
+; LOADR          ; 0110  ; Unsigned Binary                         ;
+; STORER         ; 0111  ; Unsigned Binary                         ;
+; ADD            ; 1000  ; Unsigned Binary                         ;
+; SUB            ; 1001  ; Unsigned Binary                         ;
+; JMPNEG         ; 1100  ; Unsigned Binary                         ;
+; JMPZ           ; 1101  ; Unsigned Binary                         ;
+; JMP            ; 1110  ; Unsigned Binary                         ;
+; END            ; 1111  ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:the_alu ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; ADD            ; 01    ; Unsigned Binary                 ;
+; SUBTRACT       ; 10    ; Unsigned Binary                 ;
+; PASS_THROUGH   ; 11    ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                               ;
++-------------------------------------------+----------------------------------------------------+
+; Name                                      ; Value                                              ;
++-------------------------------------------+----------------------------------------------------+
+; Number of entity instances                ; 1                                                  ;
+; Entity Instance                           ; memory:main_memory|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                        ;
+;     -- WIDTH_A                            ; 16                                                 ;
+;     -- NUMWORDS_A                         ; 1024                                               ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                             ;
+;     -- WIDTH_B                            ; 1                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                          ;
++-------------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "memory:main_memory" ;
++---------+-------+----------+-------------------+
+; Port    ; Type  ; Severity ; Details           ;
++---------+-------+----------+-------------------+
+; byteena ; Input ; Info     ; Stuck at VCC      ;
++---------+-------+----------+-------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Fri Mar 19 09:59:32 2010
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off orcs_v1 -c orcs_v1
+Info: Found 1 design units, including 1 entities, in source file control.v
+    Info: Found entity 1: control
+Info: Found 1 design units, including 1 entities, in source file alu.v
+    Info: Found entity 1: alu
+Info: Found 1 design units, including 1 entities, in source file orcs_v1.v
+    Info: Found entity 1: orcs_v1
+Info: Found 1 design units, including 1 entities, in source file register_file.v
+    Info: Found entity 1: register_file
+Info: Found 1 design units, including 1 entities, in source file memory.v
+    Info: Found entity 1: memory
+Info: Elaborating entity "orcs_v1" for the top level hierarchy
+Info: Elaborating entity "memory" for hierarchy "memory:main_memory"
+Info: Elaborating entity "altsyncram" for hierarchy "memory:main_memory|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "memory:main_memory|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "memory:main_memory|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "byte_size" = "8"
+    Info: Parameter "clock_enable_input_a" = "NORMAL"
+    Info: Parameter "clock_enable_output_a" = "NORMAL"
+    Info: Parameter "init_file" = "orcs_v1.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "1024"
+    Info: Parameter "operation_mode" = "SINGLE_PORT"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "CLOCK0"
+    Info: Parameter "power_up_uninitialized" = "FALSE"
+    Info: Parameter "widthad_a" = "10"
+    Info: Parameter "width_a" = "16"
+    Info: Parameter "width_byteena_a" = "2"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_17f1.tdf
+    Info: Found entity 1: altsyncram_17f1
+Info: Elaborating entity "altsyncram_17f1" for hierarchy "memory:main_memory|altsyncram:altsyncram_component|altsyncram_17f1:auto_generated"
+Info: Elaborating entity "control" for hierarchy "control:the_control"
+Info (10264): Verilog HDL Case Statement information at control.v(199): all case item expressions in this case statement are onehot
+Info: Elaborating entity "register_file" for hierarchy "register_file:the_reg_file"
+Info: Elaborating entity "alu" for hierarchy "alu:the_alu"
+Info: 7 registers lost all their fanouts during netlist optimizations. The first 7 are displayed below.
+    Info: Register "control:the_control|instruction_fetch_sequence~6" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~4" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~5" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~6" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~7" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~8" lost all its fanouts during netlist optimizations.
+    Info: Register "control:the_control|S~9" lost all its fanouts during netlist optimizations.
+Info: Implemented 1017 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 118 output pins
+    Info: Implemented 881 logic cells
+    Info: Implemented 16 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 182 megabytes
+    Info: Processing ended: Fri Mar 19 09:59:42 2010
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:06
+
+
