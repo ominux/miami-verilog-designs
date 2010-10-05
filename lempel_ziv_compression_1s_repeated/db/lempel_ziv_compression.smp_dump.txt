@@ -1,0 +1,11 @@
+
+State Machine - |lempel_ziv_compression|s
+Name s.create_item s.encode s.search s.get_next_bit s.create_loop s.initialize_dictionary s.make_zeros s.done 
+s.make_zeros 0 0 0 0 0 0 0 0 
+s.initialize_dictionary 0 0 0 0 0 1 1 0 
+s.create_loop 0 0 0 0 1 0 1 0 
+s.get_next_bit 0 0 0 1 0 0 1 0 
+s.search 0 0 1 0 0 0 1 0 
+s.encode 0 1 0 0 0 0 1 0 
+s.create_item 1 0 0 0 0 0 1 0 
+s.done 0 0 0 0 0 0 1 1 

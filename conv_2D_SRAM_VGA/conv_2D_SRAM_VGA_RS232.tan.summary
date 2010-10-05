@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.978 ns
+From           : SW[14]
+To             : in[2]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.391 ns
+From           : spot[0]
+To             : SRAM_ADDR[0]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.612 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.473 ns
+From           : altera_internal_jtag~TDIUTAP
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[3]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : -1.399 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_e2d1:auto_generated|altsyncram_esn1:altsyncram1|ram_block2a11
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_trigger_in_reg[137]
+From Clock     : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+To Clock       : CLOCK_50
+Failed Paths   : 637
+
+Type           : Clock Setup: 'VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk0'
+Slack          : 12.323 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : sum[0]
+To             : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_e2d1:auto_generated|altsyncram_esn1:altsyncram1|ram_block2a21~portb_datain_reg0
+From Clock     : CLOCK_50
+To Clock       : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1'
+Slack          : 34.765 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 191.02 MHz ( period = 5.235 ns )
+From           : VgaAdapter:inst|xCounter[8]
+To             : VgaAdapter:inst|yCounter[9]
+From Clock     : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+To Clock       : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 111.86 MHz ( period = 8.940 ns )
+From           : sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm|state[4]
+To             : sld_hub:auto_hub|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|trigger_out_mode_ff
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|trigger_out_mode_ff
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1'
+Slack          : 0.522 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : VgaAdapter:inst|VGA_VS1
+To             : VgaAdapter:inst|VGA_VS
+From Clock     : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+To Clock       : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk0'
+Slack          : 2.646 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_e2d1:auto_generated|altsyncram_esn1:altsyncram1|ram_block2a9~portb_datain_reg0
+To             : VgaAdapter:inst|altsyncram:frameBufferRam|altsyncram_e2d1:auto_generated|altsyncram_esn1:altsyncram1|ram_block2a9~portb_memory_reg0
+From Clock     : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+To Clock       : VGA_clk:tenMhzvlovk|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 637
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Thu Jun 24 15:01:54 2010
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : conv_2D_SRAM_VGA_RS232
+Top-level Entity Name : conv_2D_SRAM_VGA_RS232
+Family : Cyclone II
+Device : EP2C35F672C6
+Power Models : Final
+Total Thermal Power Dissipation : 663.61 mW
+Core Dynamic Thermal Power Dissipation : 261.71 mW
+Core Static Thermal Power Dissipation : 81.83 mW
+I/O Thermal Power Dissipation : 320.07 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

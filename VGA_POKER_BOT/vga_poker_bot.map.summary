@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 17 09:55:11 2009
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : vga_poker_bot
+Top-level Entity Name : vga_poker_bot
+Family : Cyclone II
+Total logic elements : 6,146
+    Total combinational functions : 5,676
+    Dedicated logic registers : 945
+Total registers : 945
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 98,304
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 29 18:04:13 2010
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : conv_2D_SRAM_VGA_RS232
+Top-level Entity Name : conv_2D_SRAM_VGA_RS232
+Family : Cyclone II
+Total logic elements : 7,857
+    Total combinational functions : 3,248
+    Dedicated logic registers : 5,842
+Total registers : 5842
+Total pins : 443
+Total virtual pins : 0
+Total memory bits : 302,592
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 1

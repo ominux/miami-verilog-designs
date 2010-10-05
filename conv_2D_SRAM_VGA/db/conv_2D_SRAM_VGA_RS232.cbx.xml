@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="conv_2D_SRAM_VGA_RS232">
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult13|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult5" CBX_FILE_NAME="mult_uat.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_32j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult12|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult13|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_coc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_qdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|KERNEL_MOTION:motion|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0r71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult0" CBX_FILE_NAME="mult_l8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult12|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|pic_rom:my_rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2c71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|lpm_mult:Mult10" CBX_FILE_NAME="mult_uat.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|KERNEL_BLUR:blur|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vj71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|KERNEL_NORMAL:normal|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_jq71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|VgaAdapter:inst|altsyncram:frameBufferRam" CBX_FILE_NAME="altsyncram_e2d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|conv_2D_SRAM_VGA_RS232|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_2ts3.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
