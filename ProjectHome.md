@@ -1,0 +1,1 @@
+This is for the ECE 287 and 387 classes as well as the outside world to see student samples and designs.
